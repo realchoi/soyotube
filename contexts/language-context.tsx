@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { createContext, useContext, useState, useEffect } from "react"
+import { usePathname, useRouter } from "next/navigation"
 
 type Language = "zh" | "en"
 
@@ -153,21 +154,84 @@ const translations = {
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("zh")
+  const [language, setLanguageState] = useState<Language>("zh")
+  const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
-    // 从 localStorage 读取保存的语言设置
-    const savedLanguage = localStorage.getItem("language") as Language
-    if (savedLanguage && (savedLanguage === "zh" || savedLanguage === "en")) {
-      setLanguage(savedLanguage)
+    if (typeof window === "undefined") {
+      return
     }
-  }, [])
+
+    const savedLanguage = localStorage.getItem("language") as Language
+    let nextLanguage: Language | undefined
+
+    if (pathname?.startsWith("/zh")) {
+      nextLanguage = "zh"
+    } else if (pathname === "/privacy" || pathname === "/terms") {
+      nextLanguage = "en"
+    } else if (savedLanguage === "zh" || savedLanguage === "en") {
+      nextLanguage = savedLanguage
+    }
+
+    if (!nextLanguage) {
+      nextLanguage = "zh"
+    }
+
+    setLanguageState((prev) => (prev === nextLanguage ? prev : nextLanguage))
+
+    if (savedLanguage !== nextLanguage) {
+      localStorage.setItem("language", nextLanguage)
+    }
+  }, [pathname])
+
+  useEffect(() => {
+    if (typeof document === "undefined") {
+      return
+    }
+    document.documentElement.lang = language === "zh" ? "zh-CN" : "en"
+  }, [language])
+
+  const resolveLocalizedPath = (currentPath: string, targetLanguage: Language): string => {
+    if (!currentPath) {
+      return currentPath
+    }
+
+    if (targetLanguage === "zh") {
+      if (currentPath === "/privacy") {
+        return "/zh/privacy"
+      }
+      if (currentPath === "/terms") {
+        return "/zh/terms"
+      }
+      return currentPath
+    }
+
+    if (currentPath === "/zh/privacy") {
+      return "/privacy"
+    }
+    if (currentPath === "/zh/terms") {
+      return "/terms"
+    }
+    if (currentPath.startsWith("/zh/")) {
+      const stripped = currentPath.replace(/^\/zh/, "")
+      return stripped.length > 0 ? stripped : "/"
+    }
+
+    return currentPath
+  }
 
   const handleSetLanguage = (lang: Language) => {
-    setLanguage(lang)
-    localStorage.setItem("language", lang)
-    // 更新 HTML lang 属性
-    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en"
+    setLanguageState((prev) => (prev === lang ? prev : lang))
+
+    if (typeof window !== "undefined") {
+      localStorage.setItem("language", lang)
+    }
+
+    const nextPath = resolveLocalizedPath(pathname ?? "", lang)
+    if (nextPath && nextPath !== pathname) {
+      router.push(nextPath)
+    }
   }
 
   const t = (key: string): string => {

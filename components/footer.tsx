@@ -6,7 +6,9 @@ import { Github, Mail, Twitter, Heart } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
 export function Footer() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  const privacyHref = language === "zh" ? "/zh/privacy" : "/privacy"
+  const termsHref = language === "zh" ? "/zh/terms" : "/terms"
 
   return (
     <footer id="contact" className="bg-muted/30 border-t border-border/40">
@@ -67,12 +69,12 @@ export function Footer() {
             <h3 className="font-semibold text-foreground mb-4">{t("footer.legal")}</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href={privacyHref} className="text-muted-foreground hover:text-foreground transition-colors">
                   {t("nav.privacy")}
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href={termsHref} className="text-muted-foreground hover:text-foreground transition-colors">
                   {t("nav.terms")}
                 </Link>
               </li>

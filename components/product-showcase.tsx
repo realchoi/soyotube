@@ -25,7 +25,7 @@ export function ProductShowcase() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden">
               <img
-                src="/modern-macos-image-viewer-app-interface-with-elega.jpg"
+                src="/modern-macos-image-viewer-app-interface-with-elega.png"
                 alt="Pixor 看图软件界面"
                 className="w-full h-full object-cover"
               />

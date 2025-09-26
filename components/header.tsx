@@ -12,6 +12,17 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { t } = useLanguage()
 
+  const navItems = [
+    { key: "home", label: t("nav.home"), href: "/", type: "link" as const },
+    { key: "products", label: t("nav.products"), href: "#products", type: "anchor" as const },
+    { key: "features", label: t("nav.features"), href: "#features", type: "anchor" as const },
+    { key: "about", label: t("nav.about"), href: "#about", type: "anchor" as const },
+    { key: "contact", label: t("nav.contact"), href: "#contact", type: "anchor" as const },
+  ]
+
+  const navItemClass =
+    "inline-flex items-center justify-center rounded-md px-3 py-1.5 text-sm font-medium transition-colors whitespace-nowrap text-muted-foreground hover:text-foreground hover:bg-muted/60"
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,37 +36,18 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link
-              href="/"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {t("nav.home")}
-            </Link>
-            <a
-              href="#products"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {t("product.title")}
-            </a>
-            <a
-              href="#features"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {t("features.title")}
-            </a>
-            <a
-              href="#about"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {t("nav.about")}
-            </a>
-            <a
-              href="#contact"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {t("nav.contact")}
-            </a>
+          <nav className="hidden md:flex items-center space-x-3">
+            {navItems.map((item) =>
+              item.type === "link" ? (
+                <Link key={item.key} href={item.href} className={navItemClass}>
+                  {item.label}
+                </Link>
+              ) : (
+                <a key={item.key} href={item.href} className={navItemClass}>
+                  {item.label}
+                </a>
+              ),
+            )}
           </nav>
 
           {/* Desktop CTA */}
@@ -85,36 +77,17 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-border/40 py-4">
             <nav className="flex flex-col space-y-4">
-              <Link
-                href="/"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t("nav.home")}
-              </Link>
-              <a
-                href="#products"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t("product.title")}
-              </a>
-              <a
-                href="#features"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t("features.title")}
-              </a>
-              <a
-                href="#about"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t("nav.about")}
-              </a>
-              <a
-                href="#contact"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t("nav.contact")}
-              </a>
+              {navItems.map((item) =>
+                item.type === "link" ? (
+                  <Link key={item.key} href={item.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a key={item.key} href={item.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                    {item.label}
+                  </a>
+                ),
+              )}
               <div className="flex items-center space-x-4 pt-4">
                 <LanguageToggle />
                 <ThemeToggle />

@@ -14,10 +14,14 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 // 翻译数据
+const currentYear = new Date().getFullYear()
+
 const translations = {
   zh: {
     // 导航
     "nav.home": "首页",
+    "nav.products": "产品",
+    "nav.features": "特性",
     "nav.about": "关于我们",
     "nav.contact": "联系我们",
     "nav.privacy": "隐私政策",
@@ -65,7 +69,7 @@ const translations = {
     "footer.legal": "法律信息",
     "footer.contact": "联系我们",
     "footer.email": "邮箱",
-    "footer.rights": "© 2024 Soyotube. 保留所有权利。",
+    "footer.rights": `© ${currentYear} Soyotube. 保留所有权利。`,
 
     // 隐私政策
     "privacy.title": "隐私政策",
@@ -78,7 +82,9 @@ const translations = {
   en: {
     // Navigation
     "nav.home": "Home",
-    "nav.about": "About Us",
+    "nav.products": "Products",
+    "nav.features": "Features",
+    "nav.about": "About",
     "nav.contact": "Contact",
     "nav.privacy": "Privacy Policy",
     "nav.terms": "Terms of Service",
@@ -134,7 +140,7 @@ const translations = {
     "footer.legal": "Legal",
     "footer.contact": "Contact Us",
     "footer.email": "Email",
-    "footer.rights": "© 2024 Soyotube. All rights reserved.",
+    "footer.rights": `© ${currentYear} Soyotube. All rights reserved.`,
 
     // Privacy Policy
     "privacy.title": "Privacy Policy",

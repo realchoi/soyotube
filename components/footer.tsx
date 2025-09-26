@@ -91,7 +91,16 @@ export function Footer() {
         <div className="border-t border-border/40 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between">
           <p className="text-muted-foreground text-sm">{t("footer.rights")}</p>
           <p className="text-muted-foreground text-sm flex items-center mt-4 sm:mt-0">
-            Made with <Heart className="h-4 w-4 mx-1 text-primary" /> by Soyotube
+            Made with
+            {" "}
+            <Heart
+              className="h-4 w-4 mx-1 text-red-500 animate-pulse"
+              fill="currentColor"
+              strokeWidth={0}
+              aria-hidden
+            />
+            {" "}
+            by Soyotube
           </p>
         </div>
       </div>

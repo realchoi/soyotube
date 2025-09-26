@@ -6,30 +6,46 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MarkdownRenderer } from "@/lib/markdown-renderer"
 
 export function TermsOfServiceContent() {
-  const { language, t } = useLanguage()
+  const { language } = useLanguage()
   const [content, setContent] = useState<string>("")
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
+    let isMounted = true
+
     const loadContent = async () => {
       setLoading(true)
+      setError(null)
       try {
         const fileName = language === "zh" ? "terms-of-service-zh.md" : "terms-of-service-en.md"
         const response = await fetch(`/content/${fileName}`)
-        if (response.ok) {
-          const text = await response.text()
-          setContent(text)
-        } else {
-          console.error("Failed to load terms of service content")
+        if (!response.ok) {
+          throw new Error(`Failed to fetch ${fileName}: ${response.status}`)
         }
-      } catch (error) {
-        console.error("Error loading terms of service:", error)
+
+        const text = await response.text()
+        if (isMounted) {
+          setContent(text)
+        }
+      } catch (err) {
+        console.error("加载服务条款内容失败：", err)
+        if (isMounted) {
+          setError("加载服务条款内容时出现问题，请稍后再试。")
+          setContent("")
+        }
       } finally {
-        setLoading(false)
+        if (isMounted) {
+          setLoading(false)
+        }
       }
     }
 
     loadContent()
+
+    return () => {
+      isMounted = false
+    }
   }, [language])
 
   if (loading) {
@@ -44,7 +60,11 @@ export function TermsOfServiceContent() {
     <div className="max-w-4xl mx-auto">
       <Card className="border-border/50 shadow-lg">
         <CardContent className="p-8 md:p-12">
-          <MarkdownRenderer content={content} />
+          {error ? (
+            <div className="text-center text-sm text-destructive">{error}</div>
+          ) : (
+            <MarkdownRenderer content={content} />
+          )}
         </CardContent>
       </Card>
     </div>

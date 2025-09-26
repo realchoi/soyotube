@@ -99,7 +99,7 @@ Our total liability to you for any claim arising from or related to the Software
 
 ## 15. Contact Us
 
-- Email: mallocai@foxmail.com
-- Website / Support Center: https://soyotube.com
+- Email: dscai.im@gmail.com
+- Website: https://soyotube.com
 
 If you have questions or need assistance regarding these Terms, please contact us using the information above.

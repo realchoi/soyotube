@@ -122,4 +122,11 @@
   body {
     @apply bg-background text-foreground;
   }
+  .markdown-body :where(code):not(:where(pre code)) {
+    white-space: nowrap;
+  }
+  .markdown-body :where(pre) {
+    white-space: pre;
+    overflow-x: auto;
+  }
 }

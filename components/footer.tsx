@@ -33,7 +33,7 @@ export function Footer() {
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <a href="mailto:hello@soyotube.com">
+                <a href="mailto:dscai.im@gmail.com">
                   <Mail className="h-4 w-4" />
                 </a>
               </Button>
@@ -78,7 +78,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@soyotube.com"
+                  href="mailto:dscai.im@gmail.com"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t("footer.contact")}

@@ -37,9 +37,9 @@ const translations = {
 
     // 产品展示
     "product.title": "我们的产品",
-    "product.pixor.title": "Pixor",
-    "product.pixor.description": "专为 macOS 设计的现代化看图软件，支持多种图片格式，提供流畅的浏览体验。",
-    "product.pixor.features": "• 支持多种图片格式\n• 快速预览和缩放\n• 简洁直观的界面\n• 高性能图片处理",
+    "product.picser.title": "Picser",
+    "product.picser.description": "专为 macOS 设计的现代化看图软件，支持多种图片格式，提供流畅的浏览体验。",
+    "product.picser.features": "• 支持多种图片格式\n• 快速预览和缩放\n• 简洁直观的界面\n• 高性能图片处理",
     "product.learnMore": "了解更多",
     "product.download": "立即下载",
 
@@ -56,10 +56,10 @@ const translations = {
     "testimonials.title": "用户评价",
     "testimonials.user1.name": "张先生",
     "testimonials.user1.role": "设计师",
-    "testimonials.user1.content": "Pixor 是我用过的最好的看图软件，界面简洁，功能强大。",
+    "testimonials.user1.content": "Picser 是我用过的最好的看图软件，界面简洁，功能强大。",
     "testimonials.user2.name": "李女士",
     "testimonials.user2.role": "摄影师",
-    "testimonials.user2.content": "作为摄影师，我需要快速预览大量图片，Pixor 完美满足了我的需求。",
+    "testimonials.user2.content": "作为摄影师，我需要快速预览大量图片，Picser 完美满足了我的需求。",
     "testimonials.user3.name": "王先生",
     "testimonials.user3.role": "开发者",
     "testimonials.user3.content": "Soyotube 的应用质量很高，期待更多优秀的产品。",
@@ -100,10 +100,10 @@ const translations = {
 
     // Product showcase
     "product.title": "Our Products",
-    "product.pixor.title": "Pixor",
-    "product.pixor.description":
+    "product.picser.title": "Picser",
+    "product.picser.description":
       "A modern image viewer designed for macOS, supporting multiple image formats with smooth browsing experience.",
-    "product.pixor.features":
+    "product.picser.features":
       "• Support for multiple image formats\n• Fast preview and zoom\n• Clean and intuitive interface\n• High-performance image processing",
     "product.learnMore": "Learn More",
     "product.download": "Download",
@@ -124,11 +124,11 @@ const translations = {
     "testimonials.user1.name": "Mr. Zhang",
     "testimonials.user1.role": "Designer",
     "testimonials.user1.content":
-      "Pixor is the best image viewer I've ever used, with a clean interface and powerful features.",
+      "Picser is the best image viewer I've ever used, with a clean interface and powerful features.",
     "testimonials.user2.name": "Ms. Li",
     "testimonials.user2.role": "Photographer",
     "testimonials.user2.content":
-      "As a photographer, I need to quickly preview large amounts of images, and Pixor perfectly meets my needs.",
+      "As a photographer, I need to quickly preview large amounts of images, and Picser perfectly meets my needs.",
     "testimonials.user3.name": "Mr. Wang",
     "testimonials.user3.role": "Developer",
     "testimonials.user3.content":

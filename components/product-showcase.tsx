@@ -16,7 +16,7 @@ export function ProductShowcase() {
             {t("product.title")}
           </h2>
           <p className="text-lg text-muted-foreground sm:text-xl text-pretty leading-relaxed">
-            {t("product.pixor.description")}
+            {t("product.picser.description")}
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export function ProductShowcase() {
             <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden">
               <img
                 src="/modern-macos-image-viewer-app-interface-with-elega.png"
-                alt="Pixor 看图软件界面"
+                alt="Picser 看图软件界面"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -41,8 +41,8 @@ export function ProductShowcase() {
               <Badge variant="secondary" className="mb-4">
                 现已发布
               </Badge>
-              <h3 className="text-2xl font-bold text-foreground mb-4">{t("product.pixor.title")}</h3>
-              <p className="text-muted-foreground text-lg leading-relaxed">{t("product.pixor.description")}</p>
+              <h3 className="text-2xl font-bold text-foreground mb-4">{t("product.picser.title")}</h3>
+              <p className="text-muted-foreground text-lg leading-relaxed">{t("product.picser.description")}</p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">

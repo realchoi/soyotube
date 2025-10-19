@@ -11,7 +11,7 @@ const testimonials = [
     role: "摄影师",
     avatar: "/professional-photographer-avatar.jpg",
     content:
-      "Pixor 完全改变了我的工作流程。作为一名摄影师，我需要快速预览大量的 RAW 文件，Pixor 的速度和质量让我印象深刻。界面设计也非常符合我的审美。",
+      "Picser 完全改变了我的工作流程。作为一名摄影师，我需要快速预览大量的 RAW 文件，Picser 的速度和质量让我印象深刻。界面设计也非常符合我的审美。",
     rating: 5,
   },
   {
@@ -19,7 +19,7 @@ const testimonials = [
     role: "UI/UX 设计师",
     avatar: "/ui-ux-designer-avatar.jpg",
     content:
-      "作为设计师，我对软件的界面要求很高。Pixor 不仅功能强大，界面设计也非常优雅，完美融入了 macOS 的设计语言。这就是我一直在寻找的看图软件。",
+      "作为设计师，我对软件的界面要求很高。Picser 不仅功能强大，界面设计也非常优雅，完美融入了 macOS 的设计语言。这就是我一直在寻找的看图软件。",
     rating: 5,
   },
   {
@@ -27,7 +27,7 @@ const testimonials = [
     role: "软件工程师",
     avatar: "/software-engineer-avatar.png",
     content:
-      "从技术角度来看，Pixor 的性能优化做得非常出色。即使是大尺寸的图片文件，也能瞬间加载。而且完全不用担心隐私问题，所有处理都在本地完成。",
+      "从技术角度来看，Picser 的性能优化做得非常出色。即使是大尺寸的图片文件，也能瞬间加载。而且完全不用担心隐私问题，所有处理都在本地完成。",
     rating: 5,
   },
 ]

@@ -60,10 +60,17 @@ export function Header() {
               </a>
             </Button>
             <Button
+              asChild
               size="sm"
               className="bg-primary hover:bg-primary/90 text-primary-foreground dark:bg-amber-400 dark:text-black dark:hover:bg-amber-500"
             >
-              {t("product.download")}
+              <a
+                href="https://apps.apple.com/app/picser/id6752801625"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("product.download")}
+              </a>
             </Button>
           </div>
 
@@ -97,10 +104,17 @@ export function Header() {
                   </a>
                 </Button>
                 <Button
+                  asChild
                   size="sm"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground dark:bg-amber-400 dark:text-black dark:hover:bg-amber-500"
                 >
-                  {t("product.download")}
+                  <a
+                    href="https://apps.apple.com/app/picser/id6752801625"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t("product.download")}
+                  </a>
                 </Button>
               </div>
             </nav>

@@ -89,10 +89,17 @@ export function ProductShowcase() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
+                asChild
                 size="lg"
                 className="bg-primary hover:bg-primary/90 dark:bg-[oklch(0.85_0.15_85)] dark:text-[oklch(0.08_0.012_85)] dark:hover:bg-[oklch(0.85_0.15_85)]/90"
               >
-                {t("product.download")}
+                <a
+                  href="https://apps.apple.com/app/picser/id6752801625"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("product.download")}
+                </a>
               </Button>
               <Button
                 variant="outline"

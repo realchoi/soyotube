@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MarkdownRenderer } from "@/lib/markdown-renderer"
 
 export function PrivacyPolicyContent() {
-  const { language } = useLanguage()
+  const { language, t } = useLanguage()
   const [content, setContent] = useState<string>("")
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -29,9 +29,9 @@ export function PrivacyPolicyContent() {
           setContent(text)
         }
       } catch (err) {
-        console.error("加载隐私政策内容失败：", err)
+        console.error("Failed to load privacy policy content:", err)
         if (isMounted) {
-          setError("加载隐私政策内容时出现问题，请稍后再试。")
+          setError(t("error.privacy.load"))
           setContent("")
         }
       } finally {

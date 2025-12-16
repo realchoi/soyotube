@@ -26,12 +26,12 @@ export function ProductShowcase() {
             <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden">
               <img
                 src="/modern-macos-image-viewer-app-interface-with-elega.png"
-                alt="Picser 看图软件界面"
+                alt={t("product.imageAlt")}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
-              macOS 专用
+              {t("product.badge.macOS")}
             </div>
           </div>
 
@@ -39,7 +39,7 @@ export function ProductShowcase() {
           <div className="space-y-8">
             <div>
               <Badge variant="secondary" className="mb-4">
-                现已发布
+                {t("product.badge.released")}
               </Badge>
               <h3 className="text-2xl font-bold text-foreground mb-4">{t("product.picser.title")}</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">{t("product.picser.description")}</p>
@@ -51,8 +51,8 @@ export function ProductShowcase() {
                   <Eye className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">智能预览</h4>
-                  <p className="text-sm text-muted-foreground">支持所有主流图片格式</p>
+                  <h4 className="font-semibold text-foreground">{t("product.feature.preview.title")}</h4>
+                  <p className="text-sm text-muted-foreground">{t("product.feature.preview.desc")}</p>
                 </div>
               </div>
 
@@ -61,8 +61,8 @@ export function ProductShowcase() {
                   <Zap className="h-4 w-4 text-secondary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">极速加载</h4>
-                  <p className="text-sm text-muted-foreground">原生性能优化</p>
+                  <h4 className="font-semibold text-foreground">{t("product.feature.speed.title")}</h4>
+                  <p className="text-sm text-muted-foreground">{t("product.feature.speed.desc")}</p>
                 </div>
               </div>
 
@@ -71,8 +71,8 @@ export function ProductShowcase() {
                   <Palette className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">精美界面</h4>
-                  <p className="text-sm text-muted-foreground">符合 macOS 设计语言</p>
+                  <h4 className="font-semibold text-foreground">{t("product.feature.design.title")}</h4>
+                  <p className="text-sm text-muted-foreground">{t("product.feature.design.desc")}</p>
                 </div>
               </div>
 
@@ -81,8 +81,8 @@ export function ProductShowcase() {
                   <Shield className="h-4 w-4 text-secondary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">隐私保护</h4>
-                  <p className="text-sm text-muted-foreground">本地处理，安全可靠</p>
+                  <h4 className="font-semibold text-foreground">{t("product.feature.privacy.title")}</h4>
+                  <p className="text-sm text-muted-foreground">{t("product.feature.privacy.desc")}</p>
                 </div>
               </div>
             </div>
@@ -112,7 +112,7 @@ export function ProductShowcase() {
 
             {/* Product Hunt Badge */}
             <div className="pt-6 border-t border-border/50">
-              <p className="text-sm text-muted-foreground mb-3">Featured on</p>
+              <p className="text-sm text-muted-foreground mb-3">{t("product.featuredOn")}</p>
               <a
                 href="https://www.producthunt.com/products/picser-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-picser-2"
                 target="_blank"

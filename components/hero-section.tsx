@@ -52,15 +52,15 @@ export function HeroSection() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-foreground">10K+</div>
-              <div className="text-sm text-muted-foreground">活跃用户</div>
+              <div className="text-sm text-muted-foreground">{t("hero.stats.activeUsers")}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-foreground">4.9</div>
-              <div className="text-sm text-muted-foreground">用户评分</div>
+              <div className="text-sm text-muted-foreground">{t("hero.stats.rating")}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-foreground">99%</div>
-              <div className="text-sm text-muted-foreground">满意度</div>
+              <div className="text-sm text-muted-foreground">{t("hero.stats.satisfaction")}</div>
             </div>
           </div>
         </div>

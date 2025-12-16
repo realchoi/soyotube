@@ -4,47 +4,47 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Layers, Smartphone, Palette, Zap, Shield, Heart, Code, Users } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
-const features = [
-  {
-    icon: Layers,
-    title: "多格式支持",
-    description: "支持 JPEG、PNG、HEIC、RAW 等所有主流图片格式，无需转换即可预览",
-    color: "text-primary",
-  },
-  {
-    icon: Zap,
-    title: "极速性能",
-    description: "采用原生 Swift 开发，充分利用 macOS 系统优化，提供流畅的浏览体验",
-    color: "text-secondary",
-  },
-  {
-    icon: Palette,
-    title: "精美设计",
-    description: "遵循 Apple 设计规范，提供简洁优雅的用户界面，完美融入 macOS 生态",
-    color: "text-primary",
-  },
-  {
-    icon: Shield,
-    title: "隐私优先",
-    description: "所有图片处理均在本地完成，不上传任何数据，保护您的隐私安全",
-    color: "text-secondary",
-  },
-  {
-    icon: Smartphone,
-    title: "智能缩放",
-    description: "智能适应不同尺寸图片，提供最佳的显示效果和缩放体验",
-    color: "text-primary",
-  },
-  {
-    icon: Heart,
-    title: "用户至上",
-    description: "基于用户反馈持续改进，致力于提供最佳的图片浏览体验",
-    color: "text-secondary",
-  },
-]
-
 export function FeaturesSection() {
   const { t } = useLanguage()
+
+  const features = [
+    {
+      icon: Layers,
+      titleKey: "features.multiFormat.title",
+      descKey: "features.multiFormat.desc",
+      color: "text-primary",
+    },
+    {
+      icon: Zap,
+      titleKey: "features.speed.title",
+      descKey: "features.speed.desc",
+      color: "text-secondary",
+    },
+    {
+      icon: Palette,
+      titleKey: "features.design.title",
+      descKey: "features.design.desc",
+      color: "text-primary",
+    },
+    {
+      icon: Shield,
+      titleKey: "features.privacy.title",
+      descKey: "features.privacy.desc",
+      color: "text-secondary",
+    },
+    {
+      icon: Smartphone,
+      titleKey: "features.zoom.title",
+      descKey: "features.zoom.desc",
+      color: "text-primary",
+    },
+    {
+      icon: Heart,
+      titleKey: "features.userFirst.title",
+      descKey: "features.userFirst.desc",
+      color: "text-secondary",
+    },
+  ]
 
   return (
     <section id="features" className="py-20 sm:py-32 bg-muted/30">
@@ -54,7 +54,7 @@ export function FeaturesSection() {
             {t("features.title")}
           </h2>
           <p className="text-lg text-muted-foreground sm:text-xl text-pretty leading-relaxed">
-            我们专注于创造优质的用户体验，每一个细节都经过精心打磨
+            {t("features.subtitle")}
           </p>
         </div>
 
@@ -72,8 +72,8 @@ export function FeaturesSection() {
                     <feature.icon className="h-6 w-6" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-foreground mb-2 text-lg">{feature.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                    <h3 className="font-semibold text-foreground mb-2 text-lg">{t(feature.titleKey)}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{t(feature.descKey)}</p>
                   </div>
                 </div>
               </CardContent>
@@ -88,28 +88,28 @@ export function FeaturesSection() {
               <Code className="h-8 w-8 text-primary" />
             </div>
             <div className="text-2xl font-bold text-foreground">100%</div>
-            <div className="text-sm text-muted-foreground">原生开发</div>
+            <div className="text-sm text-muted-foreground">{t("features.stats.native")}</div>
           </div>
           <div className="text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-secondary/10 rounded-full">
               <Users className="h-8 w-8 text-secondary" />
             </div>
             <div className="text-2xl font-bold text-foreground">10K+</div>
-            <div className="text-sm text-muted-foreground">满意用户</div>
+            <div className="text-sm text-muted-foreground">{t("features.stats.users")}</div>
           </div>
           <div className="text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full">
               <Shield className="h-8 w-8 text-primary" />
             </div>
             <div className="text-2xl font-bold text-foreground">0</div>
-            <div className="text-sm text-muted-foreground">数据收集</div>
+            <div className="text-sm text-muted-foreground">{t("features.stats.dataCollection")}</div>
           </div>
           <div className="text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-secondary/10 rounded-full">
               <Heart className="h-8 w-8 text-secondary" />
             </div>
             <div className="text-2xl font-bold text-foreground">4.9</div>
-            <div className="text-sm text-muted-foreground">用户评分</div>
+            <div className="text-sm text-muted-foreground">{t("features.stats.rating")}</div>
           </div>
         </div>
       </div>

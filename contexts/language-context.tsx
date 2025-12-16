@@ -54,15 +54,6 @@ const translations = {
 
     // 用户评价
     "testimonials.title": "用户评价",
-    "testimonials.user1.name": "张先生",
-    "testimonials.user1.role": "设计师",
-    "testimonials.user1.content": "Picser 是我用过的最好的看图软件，界面简洁，功能强大。",
-    "testimonials.user2.name": "李女士",
-    "testimonials.user2.role": "摄影师",
-    "testimonials.user2.content": "作为摄影师，我需要快速预览大量图片，Picser 完美满足了我的需求。",
-    "testimonials.user3.name": "王先生",
-    "testimonials.user3.role": "开发者",
-    "testimonials.user3.content": "Soyotube 的应用质量很高，期待更多优秀的产品。",
 
     // 页脚
     "footer.description": "Soyotube 是一个专注于创新应用开发的工作室，致力于为用户提供优质的数字产品。",
@@ -79,6 +70,64 @@ const translations = {
     // 服务条款
     "terms.title": "服务条款",
     "terms.lastUpdated": "最后更新",
+
+    // 产品展示额外文本
+    "product.badge.released": "现已发布",
+    "product.badge.macOS": "macOS 专用",
+    "product.imageAlt": "Picser 看图软件界面",
+    "product.feature.preview.title": "智能预览",
+    "product.feature.preview.desc": "支持所有主流图片格式",
+    "product.feature.speed.title": "极速加载",
+    "product.feature.speed.desc": "原生性能优化",
+    "product.feature.design.title": "精美界面",
+    "product.feature.design.desc": "符合 macOS 设计语言",
+    "product.feature.privacy.title": "隐私保护",
+    "product.feature.privacy.desc": "本地处理，安全可靠",
+    "product.featuredOn": "推荐于",
+
+    // Hero 统计
+    "hero.stats.activeUsers": "活跃用户",
+    "hero.stats.rating": "用户评分",
+    "hero.stats.satisfaction": "满意度",
+
+    // Features 功能列表
+    "features.subtitle": "我们专注于创造优质的用户体验，每一个细节都经过精心打磨",
+    "features.multiFormat.title": "多格式支持",
+    "features.multiFormat.desc": "支持 JPEG、PNG、HEIC、RAW 等所有主流图片格式，无需转换即可预览",
+    "features.speed.title": "极速性能",
+    "features.speed.desc": "采用原生 Swift 开发，充分利用 macOS 系统优化，提供流畅的浏览体验",
+    "features.design.title": "精美设计",
+    "features.design.desc": "遵循 Apple 设计规范，提供简洁优雅的用户界面，完美融入 macOS 生态",
+    "features.privacy.title": "隐私优先",
+    "features.privacy.desc": "所有图片处理均在本地完成，不上传任何数据，保护您的隐私安全",
+    "features.zoom.title": "智能缩放",
+    "features.zoom.desc": "智能适应不同尺寸图片，提供最佳的显示效果和缩放体验",
+    "features.userFirst.title": "用户至上",
+    "features.userFirst.desc": "基于用户反馈持续改进，致力于提供最佳的图片浏览体验",
+    "features.stats.native": "原生开发",
+    "features.stats.users": "满意用户",
+    "features.stats.dataCollection": "数据收集",
+    "features.stats.rating": "用户评分",
+
+    // Testimonials 用户评价
+    "testimonials.sectionTitle": "用户怎么说",
+    "testimonials.sectionSubtitle": "听听我们用户的真实反馈",
+    "testimonials.user1.name": "张小明",
+    "testimonials.user1.role": "摄影师",
+    "testimonials.user1.content": "Picser 完全改变了我的工作流程。作为一名摄影师，我需要快速预览大量的 RAW 文件，Picser 的速度和质量让我印象深刻。界面设计也非常符合我的审美。",
+    "testimonials.user2.name": "李设计师",
+    "testimonials.user2.role": "UI/UX 设计师",
+    "testimonials.user2.content": "作为设计师，我对软件的界面要求很高。Picser 不仅功能强大，界面设计也非常优雅，完美融入了 macOS 的设计语言。这就是我一直在寻找的看图软件。",
+    "testimonials.user3.name": "王开发者",
+    "testimonials.user3.role": "软件工程师",
+    "testimonials.user3.content": "从技术角度来看，Picser 的性能优化做得非常出色。即使是大尺寸的图片文件，也能瞬间加载。而且完全不用担心隐私问题，所有处理都在本地完成。",
+
+    // Theme toggle
+    "theme.toggle": "切换主题",
+
+    // Error messages
+    "error.privacy.load": "加载隐私政策内容时出现问题，请稍后再试。",
+    "error.terms.load": "加载服务条款内容时出现问题，请稍后再试。",
   },
   en: {
     // Navigation
@@ -121,18 +170,6 @@ const translations = {
 
     // Testimonials
     "testimonials.title": "User Reviews",
-    "testimonials.user1.name": "Mr. Zhang",
-    "testimonials.user1.role": "Designer",
-    "testimonials.user1.content":
-      "Picser is the best image viewer I've ever used, with a clean interface and powerful features.",
-    "testimonials.user2.name": "Ms. Li",
-    "testimonials.user2.role": "Photographer",
-    "testimonials.user2.content":
-      "As a photographer, I need to quickly preview large amounts of images, and Picser perfectly meets my needs.",
-    "testimonials.user3.name": "Mr. Wang",
-    "testimonials.user3.role": "Developer",
-    "testimonials.user3.content":
-      "Soyotube's applications are of high quality, looking forward to more excellent products.",
 
     // Footer
     "footer.description":
@@ -150,6 +187,64 @@ const translations = {
     // Terms of Service
     "terms.title": "Terms of Service",
     "terms.lastUpdated": "Last Updated",
+
+    // Product showcase extra text
+    "product.badge.released": "Available Now",
+    "product.badge.macOS": "macOS Exclusive",
+    "product.imageAlt": "Picser Image Viewer Interface",
+    "product.feature.preview.title": "Smart Preview",
+    "product.feature.preview.desc": "Supports all major image formats",
+    "product.feature.speed.title": "Lightning Fast",
+    "product.feature.speed.desc": "Native performance optimization",
+    "product.feature.design.title": "Beautiful Design",
+    "product.feature.design.desc": "Follows macOS design language",
+    "product.feature.privacy.title": "Privacy Protection",
+    "product.feature.privacy.desc": "Local processing, safe and secure",
+    "product.featuredOn": "Featured on",
+
+    // Hero stats
+    "hero.stats.activeUsers": "Active Users",
+    "hero.stats.rating": "User Rating",
+    "hero.stats.satisfaction": "Satisfaction",
+
+    // Features list
+    "features.subtitle": "We focus on creating quality user experiences, with every detail carefully refined",
+    "features.multiFormat.title": "Multi-Format Support",
+    "features.multiFormat.desc": "Supports JPEG, PNG, HEIC, RAW and all major image formats without conversion",
+    "features.speed.title": "Blazing Fast",
+    "features.speed.desc": "Built with native Swift, fully optimized for macOS for smooth browsing",
+    "features.design.title": "Beautiful Design",
+    "features.design.desc": "Follows Apple design guidelines with clean, elegant UI that fits macOS",
+    "features.privacy.title": "Privacy First",
+    "features.privacy.desc": "All image processing is done locally, no data uploaded, protecting your privacy",
+    "features.zoom.title": "Smart Zoom",
+    "features.zoom.desc": "Intelligently adapts to different image sizes for optimal display and zoom",
+    "features.userFirst.title": "User First",
+    "features.userFirst.desc": "Continuously improved based on user feedback, committed to the best experience",
+    "features.stats.native": "Native Built",
+    "features.stats.users": "Happy Users",
+    "features.stats.dataCollection": "Data Collection",
+    "features.stats.rating": "User Rating",
+
+    // Testimonials
+    "testimonials.sectionTitle": "What Users Say",
+    "testimonials.sectionSubtitle": "Hear real feedback from our users",
+    "testimonials.user1.name": "Michael Zhang",
+    "testimonials.user1.role": "Photographer",
+    "testimonials.user1.content": "Picser has completely transformed my workflow. As a photographer, I need to quickly preview large amounts of RAW files, and Picser's speed and quality impressed me. The interface design also matches my aesthetics perfectly.",
+    "testimonials.user2.name": "Lisa Lee",
+    "testimonials.user2.role": "UI/UX Designer",
+    "testimonials.user2.content": "As a designer, I have high standards for software interfaces. Picser is not only powerful but also beautifully designed, perfectly integrating with macOS design language. This is the image viewer I've been looking for.",
+    "testimonials.user3.name": "David Wang",
+    "testimonials.user3.role": "Software Engineer",
+    "testimonials.user3.content": "From a technical standpoint, Picser's performance optimization is outstanding. Even large image files load instantly. And there's no privacy concern since all processing is done locally.",
+
+    // Theme toggle
+    "theme.toggle": "Toggle theme",
+
+    // Error messages
+    "error.privacy.load": "Failed to load privacy policy. Please try again later.",
+    "error.terms.load": "Failed to load terms of service. Please try again later.",
   },
 }
 

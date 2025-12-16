@@ -33,6 +33,9 @@ export function HeroSection() {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg dark:bg-[oklch(0.85_0.15_85)] dark:text-[oklch(0.08_0.012_85)] dark:hover:bg-[oklch(0.85_0.15_85)]/90"
+              onClick={() => {
+                document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })
+              }}
             >
               <Download className="mr-2 h-5 w-5" />
               {t("product.download")}

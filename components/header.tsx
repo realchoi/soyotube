@@ -12,11 +12,18 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { t } = useLanguage()
 
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const targetId = href.replace("#", "")
+    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" })
+    setIsMenuOpen(false) // 关闭移动端菜单
+  }
+
   const navItems = [
     { key: "home", label: t("nav.home"), href: "/", type: "link" as const },
     { key: "products", label: t("nav.products"), href: "#products", type: "anchor" as const },
     { key: "features", label: t("nav.features"), href: "#features", type: "anchor" as const },
-    { key: "about", label: t("nav.about"), href: "#about", type: "anchor" as const },
+    { key: "testimonials", label: t("nav.testimonials"), href: "#testimonials", type: "anchor" as const },
     { key: "contact", label: t("nav.contact"), href: "#contact", type: "anchor" as const },
   ]
 
@@ -43,7 +50,7 @@ export function Header() {
                   {item.label}
                 </Link>
               ) : (
-                <a key={item.key} href={item.href} className={navItemClass}>
+                <a key={item.key} href={item.href} className={navItemClass} onClick={(e) => handleAnchorClick(e, item.href)}>
                   {item.label}
                 </a>
               ),
@@ -90,7 +97,7 @@ export function Header() {
                     {item.label}
                   </Link>
                 ) : (
-                  <a key={item.key} href={item.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                  <a key={item.key} href={item.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" onClick={(e) => handleAnchorClick(e, item.href)}>
                     {item.label}
                   </a>
                 ),

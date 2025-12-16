@@ -20,14 +20,14 @@ export function ProductShowcase() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
           {/* Product Image */}
-          <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden">
+          <div className="relative lg:col-span-7">
+            <div className="rounded-2xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden">
               <img
-                src="/modern-macos-image-viewer-app-interface-with-elega.png"
+                src="/picser.png"
                 alt={t("product.imageAlt")}
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
@@ -36,7 +36,7 @@ export function ProductShowcase() {
           </div>
 
           {/* Product Details */}
-          <div className="space-y-8">
+          <div className="space-y-8 lg:col-span-5">
             <div>
               <Badge variant="secondary" className="mb-4">
                 {t("product.badge.released")}

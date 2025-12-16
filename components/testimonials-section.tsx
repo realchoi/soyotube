@@ -45,7 +45,7 @@ export function TestimonialsSection() {
   const currentTestimonial = testimonialKeys[currentIndex]
 
   return (
-    <section className="py-20 sm:py-32">
+    <section id="testimonials" className="py-20 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl text-balance mb-6">

@@ -109,6 +109,32 @@ export function ProductShowcase() {
                 {t("hero.viewDemo")}
               </Button>
             </div>
+
+            {/* Product Hunt Badge */}
+            <div className="pt-6 border-t border-border/50">
+              <p className="text-sm text-muted-foreground mb-3">Featured on</p>
+              <a
+                href="https://www.producthunt.com/products/picser-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-picser-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-transform duration-300 hover:scale-105 hover:opacity-90"
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1028407&theme=light&t=1765868509238"
+                  alt="Picser - A native, powerful, elegant image viewer designed for macOS. | Product Hunt"
+                  width="250"
+                  height="54"
+                  className="dark:hidden"
+                />
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1028407&theme=dark&t=1765868509238"
+                  alt="Picser - A native, powerful, elegant image viewer designed for macOS. | Product Hunt"
+                  width="250"
+                  height="54"
+                  className="hidden dark:block"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
